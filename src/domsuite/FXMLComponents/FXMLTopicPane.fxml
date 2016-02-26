@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<Button mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="84.0" prefWidth="181.0" styleClass="topicPanel" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <graphic>
+      <BorderPane prefHeight="200.0" prefWidth="200.0">
+         <top>
+            <Label prefHeight="17.0" prefWidth="142.0" styleClass="topicTitle" text="Label" BorderPane.alignment="CENTER" />
+         </top>
+      </BorderPane>
+   </graphic>
+</Button>

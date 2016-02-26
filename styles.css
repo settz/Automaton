@@ -1,0 +1,59 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 24/02/2016, 8:15:22 AM
+    Author     : MartinT
+*/
+
+.mainPane {
+    -fx-background-image: url("mainBackGround.jpg");
+    -fx-background-repeat:  stretch;
+    -fx-background-position: center center;
+    /* -fx-background-size: contain; */
+}
+.statusPanel{
+    -fx-background-color: white;
+}
+
+.statusText{
+    -fx-font-size: 1.5em;
+    -fx-background-color: white;
+    -fx-text-fill: gray;
+}
+
+.titleText_1{
+    -fx-font-size: 2em;
+    -fx-background-color: white;
+    -fx-text-fill: #00a5f4;
+}
+
+.titleBar{
+    -fx-font-size: 2em;
+    -fx-background-color: white;
+}
+
+.topicLabelText{
+    -fx-font-size: 1em;
+    -fx-background-color: white;
+    -fx-text-fill: gray;   
+}
+
+.topicPanel{
+    -fx-background-color: white;
+    -fx-background-radius: 20, 20, 20, 20;
+    -fx-border-radius: 20, 20, 20, 20;
+    -fx-border-color: lightgray;
+    -fx-border-width: 1;
+    -fx-padding: 5;
+    -fx-effect: dropshadow(three-pass-box, derive(cadetblue, -20%), 10, 0, 4, 4); 
+}
+
+.topicTitle{
+    -fx-font-size: 1.3em;
+    -fx-background-color: white;
+    -fx-text-fill: gray;   
+    -fx-alignment:CENTER;
+}
