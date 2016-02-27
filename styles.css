@@ -52,8 +52,15 @@ and open the template in the editor.
 }
 
 .topicTitle{
-    -fx-font-size: 1.3em;
+    -fx-font-size: 1em;
     -fx-background-color: white;
     -fx-text-fill: gray;   
+    -fx-alignment:CENTER;
+}
+
+.topicText{
+    -fx-font-size: 2em;
+    -fx-background-color: white;
+    -fx-text-fill: #00a5f4;   
     -fx-alignment:CENTER;
 }

@@ -42,78 +42,194 @@
          <center>
             <FlowPane hgap="20.0" styleClass="mainPane" vgap="20.0" BorderPane.alignment="CENTER">
                <children>
-                  <Button fx:id="btnPool" mnemonicParsing="false" onAction="#handleButtonAction" styleClass="topicPanel">
+                  <Button fx:id="btnPoolMode" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="63.0" prefWidth="151.0" styleClass="topicPanel">
                      <graphic>
-                        <BorderPane>
-                           <top>
-                              <Label prefHeight="17.0" prefWidth="142.0" styleClass="topicTitle" text="Pool" BorderPane.alignment="CENTER" />
-                           </top>
-                           <bottom>
-                              <GridPane BorderPane.alignment="CENTER">
-                                <columnConstraints>
-                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="57.0" minWidth="10.0" prefWidth="36.0" />
-                                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="89.0" minWidth="10.0" prefWidth="89.0" />
-                                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                                </columnConstraints>
-                                <rowConstraints>
-                                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                                </rowConstraints>
+                        <VBox>
+                           <children>
+                              <HBox prefHeight="22.0" prefWidth="178.0">
                                  <children>
-                                    <Label fx:id="txPoolMode" text="Auto" GridPane.columnIndex="1" GridPane.columnSpan="2" />
-                                    <Label text="Temperature" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-                                    <Label text="Ph" GridPane.columnIndex="1" GridPane.rowIndex="2" />
-                                    <Label fx:id="txPoolTemp" text="Label" GridPane.columnIndex="2" GridPane.rowIndex="1" />
-                                    <Label fx:id="txPoolPh" text="Label" GridPane.columnIndex="2" GridPane.rowIndex="2" />
-                                    <Label fx:id="txPoolRunState" text="Off" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.rowIndex="3" />
-                                    <ImageView fitHeight="29.0" fitWidth="9.0" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="1">
-                                       <image>
-                                          <Image url="@../../Thermometer.JPG" />
-                                       </image>
-                                    </ImageView>
-                                    <ImageView fitHeight="49.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="2">
-                                       <image>
-                                          <Image url="@../../PhIndicator.jpg" />
-                                       </image>
-                                    </ImageView>
+                                    <ImageView fitHeight="22.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true" />
+                                    <Label styleClass="topicTitle" text="Pool Mode" />
                                  </children>
-                              </GridPane>
-                           </bottom>
-                        </BorderPane>
+                              </HBox>
+                              <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                                 <children>
+                                    <Label fx:id="txPoolMode" layoutX="67.0" layoutY="112.0" styleClass="topicText" text="Label" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                                 </children>
+                              </AnchorPane>
+                           </children>
+                        </VBox>
                      </graphic>
                   </Button>
-                  <Button fx:id="btnSprinklers" mnemonicParsing="false" onAction="#handleButtonAction" styleClass="topicPanel">
+                  <Button fx:id="btnPoolFilter" layoutX="262.0" layoutY="72.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="60.0" prefWidth="160.0" styleClass="topicPanel">
                      <graphic>
-                        <BorderPane>
-                           <top>
-                              <Label styleClass="topicTitle" text="Sprinklers" BorderPane.alignment="CENTER" />
-                           </top>
-                           <center>
-                              <GridPane BorderPane.alignment="CENTER">
-                                <columnConstraints>
-                                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                                </columnConstraints>
-                                <rowConstraints>
-                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                                </rowConstraints>
+                        <VBox>
+                           <children>
+                              <HBox prefHeight="22.0" prefWidth="178.0">
                                  <children>
-                                    <Label text="Vege Patch" GridPane.rowIndex="1" />
-                                    <Label text="Backyard" GridPane.rowIndex="2" />
-                                    <Label text="Pool Area" GridPane.rowIndex="3" />
-                                    <Label fx:id="txIrrZone_1" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-                                    <Label fx:id="txIrrZone_2" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="2" />
-                                    <Label fx:id="txIrrZone_3" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="3" />
-                                    <Label fx:id="txIrrMode" text="Auto" GridPane.columnSpan="2" />
+                                    <ImageView fitHeight="22.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true" />
+                                    <Label styleClass="topicTitle" text="Filter Pump" />
                                  </children>
-                              </GridPane>
-                           </center>
-                        </BorderPane>
+                              </HBox>
+                              <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                                 <children>
+                                    <Label fx:id="txPoolFilter" layoutX="67.0" layoutY="112.0" styleClass="topicText" text="Label" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                                 </children>
+                              </AnchorPane>
+                           </children>
+                        </VBox>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="btnPoolCleaner" layoutX="494.0" layoutY="72.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="65.0" prefWidth="156.0" styleClass="topicPanel">
+                     <graphic>
+                        <VBox>
+                           <children>
+                              <HBox prefHeight="22.0" prefWidth="178.0">
+                                 <children>
+                                    <ImageView fitHeight="22.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true" />
+                                    <Label styleClass="topicTitle" text="Infloor Cleaning" />
+                                 </children>
+                              </HBox>
+                              <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                                 <children>
+                                    <Label fx:id="txPoolCleaning" layoutX="67.0" layoutY="112.0" styleClass="topicText" text="Label" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                                 </children>
+                              </AnchorPane>
+                           </children>
+                        </VBox>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="btnPoolSolar" layoutX="30.0" layoutY="198.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="64.0" prefWidth="166.0" styleClass="topicPanel">
+                     <graphic>
+                        <VBox>
+                           <children>
+                              <HBox prefHeight="22.0" prefWidth="178.0">
+                                 <children>
+                                    <ImageView fitHeight="22.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true" />
+                                    <Label styleClass="topicTitle" text="Pool Solar Heating" />
+                                 </children>
+                              </HBox>
+                              <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                                 <children>
+                                    <Label fx:id="txPoolSolar" layoutX="67.0" layoutY="112.0" styleClass="topicText" text="Label" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                                 </children>
+                              </AnchorPane>
+                           </children>
+                        </VBox>
+                     </graphic>
+                  </Button>
+                  <Button layoutX="30.0" layoutY="198.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="64.0" prefWidth="166.0" styleClass="topicPanel">
+                     <graphic>
+                        <VBox>
+                           <children>
+                              <HBox prefHeight="22.0" prefWidth="178.0">
+                                 <children>
+                                    <ImageView fitHeight="22.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true" />
+                                    <Label styleClass="topicTitle" text="Pool Temperature" />
+                                 </children>
+                              </HBox>
+                              <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                                 <children>
+                                    <Label fx:id="txPoolTemp" layoutX="67.0" layoutY="112.0" styleClass="topicText" text="Label" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                                 </children>
+                              </AnchorPane>
+                           </children>
+                        </VBox>
+                     </graphic>
+                  </Button>
+                  <Button layoutX="216.0" layoutY="198.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="64.0" prefWidth="166.0" styleClass="topicPanel">
+                     <graphic>
+                        <VBox>
+                           <children>
+                              <HBox prefHeight="22.0" prefWidth="178.0">
+                                 <children>
+                                    <ImageView fitHeight="22.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true" />
+                                    <Label styleClass="topicTitle" text="Pool Ph" />
+                                 </children>
+                              </HBox>
+                              <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                                 <children>
+                                    <Label fx:id="txPoolPh" layoutX="67.0" layoutY="112.0" styleClass="topicText" text="Label" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                                 </children>
+                              </AnchorPane>
+                           </children>
+                        </VBox>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="btnIrrMode" layoutX="402.0" layoutY="198.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="64.0" prefWidth="166.0" styleClass="topicPanel">
+                     <graphic>
+                        <VBox>
+                           <children>
+                              <HBox prefHeight="22.0" prefWidth="178.0">
+                                 <children>
+                                    <ImageView fitHeight="22.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true" />
+                                    <Label styleClass="topicTitle" text="Irrigation Mode" />
+                                 </children>
+                              </HBox>
+                              <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                                 <children>
+                                    <Label fx:id="txIrrMode" layoutX="67.0" layoutY="112.0" styleClass="topicText" text="Label" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                                 </children>
+                              </AnchorPane>
+                           </children>
+                        </VBox>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="btnIrrZone_1" layoutX="588.0" layoutY="198.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="64.0" prefWidth="166.0" styleClass="topicPanel">
+                     <graphic>
+                        <VBox>
+                           <children>
+                              <HBox prefHeight="22.0" prefWidth="178.0">
+                                 <children>
+                                    <ImageView fitHeight="22.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true" />
+                                    <Label styleClass="topicTitle" text="Vege Sprinker" />
+                                 </children>
+                              </HBox>
+                              <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                                 <children>
+                                    <Label fx:id="txIrrZone_1" layoutX="67.0" layoutY="112.0" styleClass="topicText" text="Label" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                                 </children>
+                              </AnchorPane>
+                           </children>
+                        </VBox>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="btnIrrZone_2" layoutX="30.0" layoutY="283.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="64.0" prefWidth="166.0" styleClass="topicPanel">
+                     <graphic>
+                        <VBox>
+                           <children>
+                              <HBox prefHeight="22.0" prefWidth="178.0">
+                                 <children>
+                                    <ImageView fitHeight="22.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true" />
+                                    <Label styleClass="topicTitle" text="Pool Sprinkers" />
+                                 </children>
+                              </HBox>
+                              <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                                 <children>
+                                    <Label fx:id="txIrrZone_2" layoutX="67.0" layoutY="112.0" styleClass="topicText" text="Label" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                                 </children>
+                              </AnchorPane>
+                           </children>
+                        </VBox>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="btnIrrZone_3" layoutX="30.0" layoutY="283.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="64.0" prefWidth="166.0" styleClass="topicPanel">
+                     <graphic>
+                        <VBox>
+                           <children>
+                              <HBox prefHeight="22.0" prefWidth="178.0">
+                                 <children>
+                                    <ImageView fitHeight="22.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true" />
+                                    <Label styleClass="topicTitle" text="Garden Sprinkers" />
+                                 </children>
+                              </HBox>
+                              <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                                 <children>
+                                    <Label fx:id="txIrrZone_3" layoutX="67.0" layoutY="112.0" styleClass="topicText" text="Label" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                                 </children>
+                              </AnchorPane>
+                           </children>
+                        </VBox>
                      </graphic>
                   </Button>
                </children>
