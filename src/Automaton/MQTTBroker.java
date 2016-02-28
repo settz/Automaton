@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package domsuite;
+package Automaton;
     
 import org.eclipse.paho.client.mqttv3.IMqttDeliveryToken;
 import org.eclipse.paho.client.mqttv3.MqttCallback;
@@ -72,11 +72,17 @@ public class MQTTBroker implements MqttCallback{
 
         if(topic.equals(poolController.STATUS_TOPIC))
         {
-            for(int i=1;i<=16;i++)
+            /*
+            ** Status bits for remote device
+            ** Bit Pos.|   0  |   1   |  2  |  3  |  4  |   5 |  6  |   7    |  8  |  9  |  10 | 11  | 12  | 13  | 14  |   15   |
+            ** Device. |Filter|Cleaner|Solar|Spare|Spare|Spare|Spare|Auto/Man|Zone1|Zone2|Zone3|Spare|Spare|Spare|Spare|Auto/Man|
+            ** Group.  |<====================== Pool =======================>|<================== Irrigation ==================>|
+            */
+            for(int i=0;i<16;i++)
             {
                 switch(i)
                 {
-                    case 5:
+                    case 7:
                         poolCtrl.nAutoMode = getBit(status, i);
                         break;
                     case 1:
@@ -87,6 +93,18 @@ public class MQTTBroker implements MqttCallback{
                         break;
                     case 0:
                         poolCtrl.nFilter = getBit(status, i);
+                        break;
+                    case 8:
+                        poolCtrl.nIrrZone_1 = getBit(status, i);
+                        break;
+                    case 9:
+                        poolCtrl.nIrrZone_2 = getBit(status, i);
+                        break;
+                    case 10:
+                        poolCtrl.nIrrZone_3 = getBit(status, i);
+                        break;
+                    case 15:
+                        poolCtrl.nIrrAutoMode = getBit(status, i);
                         break;
                     default:
                         break;                            

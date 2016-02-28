@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package domsuite;
+package Automaton;
 
 import java.io.File;
 import java.util.HashSet;
@@ -18,7 +18,7 @@ import javafx.stage.Stage;
  *
  * @author MartinT
  */
-public class DomSuite extends Application {
+public class Automaton extends Application {
     MQTTBroker MQTT;
     FXMLDocumentController ctrl;
         
