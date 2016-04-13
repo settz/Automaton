@@ -1,0 +1,10 @@
+Manifest-Version: 1.0
+Implementation-Title: Automaton
+Implementation-Version: 1.0
+Permissions: sandbox
+Codebase: *
+JavaFX-Version: 8.0
+Class-Path: lib/mqtt-client-0.4.0-javadoc.jar lib/mqtt-client-0.4.0.jar
+Created-By: JavaFX Packager
+Implementation-Vendor: MartinT
+Main-Class: Automaton.Automaton
